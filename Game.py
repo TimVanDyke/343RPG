@@ -8,11 +8,12 @@ class Game(Observer):
         self.nHood = Neighborhood()
         self.nHood.setPos(x, y)
         self.win = False
+        self.gameLoop()
 
     def observerUpdate(self):
         pass
 
-    def gameLoop(self, arg):
+    def gameLoop(self):
         while not self.win:
             dead = False
             dead = self.nHood.move(self.player)
