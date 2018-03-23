@@ -38,11 +38,11 @@ class Player():
 
         #normal attack
         if random.randint(1, 10) < 9:
-            return att * weapon.use
+            return att * weapon.use()
 
         #critical hit
         else:
-            return att * weapon.use * 3
+            return att * weapon.use() * 3
 
     #Chance to block attack and allows player to take damage
     #@Param self
