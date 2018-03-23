@@ -53,7 +53,7 @@ class Home():
             att = str(input("Please select an attack, do so by typing the name of the weapon: "))
             for weap in inv:
                 if att == weap.getName():
-                    print("You are attacking with " + weap.getName + "!!!")
+                    print("You are attacking with " + weap.getName() + "!!!")
                     attVal = Player.getAttack(weap)
                     for mon in self.monsters:
                         kill = mon.takeDamage(attVal, weap)
@@ -70,4 +70,4 @@ class Home():
                         else:
                             return False
                     fightEnd = True
-            print("Please enter a valid inventory index please")
+            print("Please enter a valid attack")
