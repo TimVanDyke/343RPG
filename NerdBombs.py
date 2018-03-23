@@ -6,4 +6,8 @@ class NerdBombs(Weapon):
     #@Param self
     #   Current Instance
     def __init__(self):
-        super(Weapon, self).__init__(1, 3.5, 5, "NerdBombs")
+        super(Weapon, self).__init__()
+        self.usesLeft = 1
+        self.lowerMod = 3.5
+        self.upperMod = 5
+        self.name = "NerdBombs"

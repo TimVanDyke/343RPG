@@ -6,4 +6,8 @@ class ChocolateBars(Weapon):
     #@Param Self
     #   Current Instance
     def __init__(self):
-        super(Weapon, self).__init__(4, 2, 2.4, "ChocolateBars")
+        super(Weapon, self).__init__()
+        self.usesLeft = 4
+        self.lowerMod = 2
+        self.upperMod = 2.4
+        self.name = "ChocolateBars"

@@ -7,7 +7,11 @@ class Kiss(Weapon):
     #@Param self
     #   Current Instance
     def __init__(self):
-        super(Weapon, self).__init__(1, 1, 1, "Kiss")
+        super(Weapon, self).__init__()
+        self.usesLeft = 1
+        self.lowerMod = 1
+        self.upperMod = 1
+        self.name = "Kiss"
 
     #Uses the weapon and sets a random damage amount
     #@Param self

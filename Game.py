@@ -4,7 +4,6 @@ from Player import Player
 
 class Game():
     def __init__(self, x=1, y=1, generated=True):
-        print("I ran")
         self.player = Player(generated)
         self.nHood = Neighborhood()
         self.nHood.setPos(x, y)
@@ -27,3 +26,4 @@ class Game():
                 print("You need to be better if you actually plan on saving your family")
 
 g = Game()
+print("ran")

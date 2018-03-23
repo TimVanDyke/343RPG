@@ -6,4 +6,8 @@ class SourStraws(Weapon):
     #@Param self
     #   Current Instance
     def __init__(self):
-        super(Weapon, self).__init__(2, 1, 1.75, "sourStraws")
+        super(Weapon, self).__init__()
+        self.usesLeft = 2
+        self.lowerMod = 1
+        self.upperMod = 1.75
+        self.name = "SourStraws"

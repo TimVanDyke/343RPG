@@ -2,9 +2,12 @@ from NPC import NPC
 
 class Monster(NPC):
 
-    name = "Monster"
     #Creates Constructor for Monsters
     #@Param self
     #   Current Instance
     def __init__(self):
-        super(NPC, self).__init__(1, 1, 1, 1)
+        super(NPC, self).__init__()
+        self.maxAtt = 1
+        self.minAtt = 1
+        self.health = 1
+        self.name = "Monster"

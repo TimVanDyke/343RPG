@@ -1,13 +1,17 @@
 from Monster import Monster
+import random
 
 class Ghoul(Monster):
 
-    name = "Ghoul"
     #Creates Constructor for Ghouls
     #@Param Self
     #   Current Instance
     def __init__(self):
         super(Monster, self).__init__(15, 30, 40, 80)
+        self.maxAtt = 15
+        self.minAtt = 30
+        self.name = "Ghoul"
+        self.health = random.uniform(40, 80)
 
     #Ghouls take a different amount of damage from Nerd Bombs than other weapons
     #@Param Self

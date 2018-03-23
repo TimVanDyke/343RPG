@@ -1,11 +1,15 @@
 from Monster import Monster
+import random
 
 class Zombie(Monster):
 
-    name = "Zombie"
     #Creates Constructor for SourStraws
     def __init__(self):
-        super(Monster, self).__init__(0, 10, 50, 100)
+        super(Monster, self).__init__()
+        self.maxAtt = 0
+        self.minAtt = 10
+        self.name = "Zombie"
+        self.health = random.uniform(50, 100)
 
     #Zombies take double the damage when hit with sour straws
     def takeDamage(self, damage, weapon):
