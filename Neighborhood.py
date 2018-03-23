@@ -79,4 +79,4 @@ class Neighborhood():
         self.pos[1] += y
 
     def getHomeAttack(self, player):
-        self.Matrix[self.x, self.y].getAttack(player)
+        self.Matrix[self.x][self.y].getAttack(player)
