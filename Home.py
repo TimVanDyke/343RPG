@@ -42,7 +42,7 @@ class Home():
         while not fightEnd:
             print("The monsters in this house are: ")
             for mon in self.monsters:
-                print(self.monsters[mon].getName() + ": " + mon.getHealth())
+                print(mon.getName() + ": " + mon.getHealth())
             print("Your health is: " + player.getHealth())
             print("Your inventory is: ")
             for weap in inv:
