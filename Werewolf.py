@@ -2,9 +2,11 @@ from Monster import Monster
 
 class Werewolf(Monster):
 
+    #Creates Constructor for Werewolves
     def __init__(self):
         super(Monster, self).__init__(0, 40, 200, 200)
-
+      
+    #Werewolves don't take damage from Chocolate Bars or Sour Straws
     def takeDamage(self, damage, weapon):
         if weapon.getName == "ChocolateBars":
             damage = 0
