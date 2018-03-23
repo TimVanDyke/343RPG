@@ -51,7 +51,7 @@ class Home():
                 else:
                     print(weap.getName() + "; uses: " + str(weap.getUsesLeft()))
             att = int(input("Please select an attack, do so by selecting the correct array index as shown in the inventory (please start countring with 0): "))
-            for i in inv:
+            for i in range(0, inv.__len__):
                 if att == i:
                     if inv.__len__ < i + 1:
                         print("You selected outside the inventory")
