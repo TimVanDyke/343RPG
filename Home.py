@@ -54,10 +54,7 @@ class Home():
             for weap in inv:
                 if att == weap.getName():
                     print("You are attacking with " + weap.getName() + "!!!")
-                    weapVal = weap.use()
-                    print(weap.getName())
-                    print(weapVal)
-                    attVal = Player.getAttack(weapVal)
+                    attVal = player.getAttack(weap)
                     for mon in self.monsters:
                         kill = mon.takeDamage(attVal, weap.getName())
                         if kill is True:
