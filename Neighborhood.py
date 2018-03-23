@@ -18,7 +18,7 @@ class Neighborhood():
         moved = False
         print(moved)
         while not moved:
-            dir = input("please give a direction in quotes: (w for up, a for left, s for down, d for right)")
+            dir = str(input("please give a direction in quotes: (w for up, a for left, s for down, d for right)"))
             if dir == "w":
                 if self.getPos[1] == 0:
                     print("you are already at the top of the Neighborhood! We need to finish our own Neighborhood first!")
