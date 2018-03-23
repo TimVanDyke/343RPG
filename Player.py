@@ -11,6 +11,7 @@ class Player(Observable):
     health = random.uniform(100, 125)
     inventory = []
 
+    #Creates Constructor for Player
     def __init__(self, generated):
         if generated:
             self.inventory = [Kiss(), SourStraws(), SourStraws(), SourStraws(), NerdBombs(), NerdBombs(), NerdBombs(), ChocolateBars(), ChocolateBars(), ChocolateBars()]
@@ -25,7 +26,7 @@ class Player(Observable):
                     self.inventory[i] = ChocolateBars()
                 else:
                     print("You broke something in player")
-
+    #Player Attack and deals damage depending on random amount with chance of critical hit
     def attack(self):
         att = random.uniform(self.minAtt, self.maxAtt)
 
@@ -36,7 +37,8 @@ class Player(Observable):
         #critical hit
         else:
             return att * 3
-
+    
+    #Chance to block attack and allows player to take damage
     def takeDamage(self, damage):
         rand = random.uniform(1, 10)
         #you blocked the attack!
@@ -52,12 +54,14 @@ class Player(Observable):
                 print("You were fading, BUT YOU FEEL A SUDDEN BURST OF ENERGY!")
             else:
                 print("You have died, you better practice more before trying the real thing")
-
+    
+    #Returns true if player is alive, if not return false
     def isAlive(self):
         if self.health > 1:
             return True
         else:
             return False
-
+    
+    #Updates Observable
     def observableUpdate():
         pass
