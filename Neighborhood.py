@@ -3,16 +3,16 @@ from Player import Player
 
 
 class Neighborhood():
-    pos = [0, 0]
     def __init__(self, generated):
+        self.pos = [0, 0]
         self.generated = generated
         #https://stackoverflow.com/questions/6667201/how-to-define-a-two-dimensional-array-in-python
         print("Neighborhood is instantiated")
-        w, h = 3, 2
-        Matrix = [[0 for x in range(w)] for y in range(h)]
-        for i in range(0, h):
-            for j in range(0, w):
-                Matrix[i][j] = Home(generated)
+        self.w, self.h = 3, 2
+        self.Matrix = [[0 for x in range(self.w)] for y in range(self.h)]
+        for i in range(0, self.h):
+            for j in range(0, self.w):
+                self.Matrix[i][j] = Home(generated)
 
     def move(self, player):
         moved = False
