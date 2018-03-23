@@ -1,4 +1,5 @@
 import random
+from Weapon import Weapon
 from Kiss import Kiss
 from NerdBombs import NerdBombs
 from SourStraws import SourStraws
