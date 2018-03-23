@@ -1,5 +1,4 @@
 import random
-from Weapon import Weapon
 from Kiss import Kiss
 from NerdBombs import NerdBombs
 from SourStraws import SourStraws
@@ -34,16 +33,16 @@ class Player():
     #Player Attack and deals damage depending on random amount with chance of critical hit
     #@Param self
     #   Current self
-    def getAttack(self, weapon):
+    def getAttack(self, Weapon):
         att = random.randint(self.minAtt, self.maxAtt)
 
         #normal attack
         if random.randint(1, 10) < 9:
-            return att * weapon.use
+            return att * Weapon.use
 
         #critical hit
         else:
-            return att * weapon.use * 3
+            return att * Weapon.use * 3
 
     #Chance to block attack and allows player to take damage
     #@Param self
