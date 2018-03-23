@@ -1,6 +1,54 @@
+from Home import Home
 from Observable import Observable
 from Observer import Observer
 
-class Neighborhood(Observable, Observer):
-    def __init__(self):
+
+class Neighborhood(Observable):
+    pos = [0, 0]
+    def init(self, generated):
+        #https://stackoverflow.com/questions/6667201/how-to-define-a-two-dimensional-array-in-python
+        w, h = 3, 2
+        Matrix = [[0 for x in range(w)] for y in range(h)]
+        for i in range(1, h):
+            for j in range(1, w):
+                Matrix[i][j] = Home(generated)
+
+    def move(self):
+        moved = False
+        while not moved:
+            dir = input("please give a direction in quotes: (w for up, a for left, s for down, d for right)")
+            if dir == "w":
+                if self.getPos[1] == 0:
+                    print("you are already at the top of the Neighborhood! We need to finish our own Neighborhood first!")
+                else:
+                    self.setPos(0, -1)
+            elif dir == "a":
+                if self.getPos[0] == 0:
+                    print("you are already at the left side of the Neighborhood! We need to finish our own Neighborhood first!")
+                else:
+                    self.setPos(-1, 0)
+            elif dir == "s":
+                if self.getPos[1] == self.h - 1:
+                    print("you are already at the bottom of the Neighborhood! We need to finish our own Neighborhood first!")
+                else:
+                    self.setPos(0, 1)
+            elif dir == "d":
+                if self.getPos[0] == self.w - 1:
+                    print("you are already at the right side of the Neighborhood! We need to finish our own Neighborhood first!")
+                else:
+                    self.setPos(1, 0)
+            else:
+                print("Please type 'w', 'a', 's', or 'd'")
+
+    def getPos(self):
+        return self.pos
+
+    def setPos(self, x, y):
+        self.pos[0] += x
+        self.pos[1] += y
+
+    def ObservableUpdate():
+        pass
+
+    def observerUpdate():
         pass
