@@ -7,7 +7,7 @@ class Vampire(Monster):
     #@Param self
     #   Current Instance
     def __init__(self):
-        super(Monster, self).__init__()
+        super(Monster, self).__init__(0, 20, 100, 200)
         self.maxAtt = 0
         self.minAtt = 20
         self.name = "Vampire"

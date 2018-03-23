@@ -4,16 +4,19 @@ from Player import Player
 
 class Neighborhood():
     pos = [0, 0]
-    def init(self, generated):
+    def __init__(self, generated):
+        self.generated = generated
         #https://stackoverflow.com/questions/6667201/how-to-define-a-two-dimensional-array-in-python
+        print("Neighborhood is instantiated")
         w, h = 3, 2
         Matrix = [[0 for x in range(w)] for y in range(h)]
-        for i in range(1, h):
-            for j in range(1, w):
+        for i in range(0, h):
+            for j in range(0, w):
                 Matrix[i][j] = Home(generated)
 
     def move(self, player):
         moved = False
+        print(moved)
         while not moved:
             dir = input("please give a direction in quotes: (w for up, a for left, s for down, d for right)")
             if dir == "w":

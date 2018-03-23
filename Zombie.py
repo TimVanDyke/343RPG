@@ -5,7 +5,7 @@ class Zombie(Monster):
 
     #Creates Constructor for SourStraws
     def __init__(self):
-        super(Monster, self).__init__()
+        super(Monster, self).__init__(0, 10, 50, 100)
         self.maxAtt = 0
         self.minAtt = 10
         self.name = "Zombie"

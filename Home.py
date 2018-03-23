@@ -11,6 +11,7 @@ class Home():
     monsters = []
 
     def __init__(self, generated):
+        print("Home is instantiated")
         if generated:
             self.monsters = [Ghoul(), Vampire(), Werewolf(), Zombie()]
         else:

@@ -4,7 +4,7 @@ class Werewolf(Monster):
 
     #Creates Constructor for Werewolves
     def __init__(self):
-        super(Monster, self).__init__()
+        super(Monster, self).__init__(0, 40, 200, 200)
         self.maxAtt = 0
         self.minAtt = 40
         self.health = 200

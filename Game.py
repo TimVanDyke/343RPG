@@ -4,14 +4,16 @@ from Player import Player
 
 class Game():
     def __init__(self, x=1, y=1, generated=True):
+        print("Game is instantiated")
         self.player = Player(generated)
-        self.nHood = Neighborhood()
+        self.nHood = Neighborhood(generated)
         self.nHood.setPos(x, y)
         self.win = False
         self.gameLoop()
 
     def gameLoop(self):
         while not self.win:
+            print("Hello, welcome to the Haunted Neighborhood")
             dead = False
             dead = self.nHood.move(self.player)
             if dead:
