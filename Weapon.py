@@ -1,6 +1,6 @@
 import random
 
-class Weapon:
+class Weapon(object):
     usesLeft = 1
     lowerMod = 1
     upperMod = 1
