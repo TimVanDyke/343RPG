@@ -47,9 +47,9 @@ class Home():
             print("Your inventory is: ")
             for weap in inv:
                 if weap.getName() == "Kiss":
-                    print(inv[weap].getName() + "; uses: infinite")
+                    print(weap.getName() + "; uses: infinite")
                 else:
-                    print(inv[weap].getName() + "; uses: " + weap.getUsesLeft())
+                    print(weap.getName() + "; uses: " + str(weap.getUsesLeft()))
             att = int(input("Please select an attack, do so by selecting the correct array index as shown in the inventory (please start countring with 0): "))
             for i in inv:
                 if att == i:
