@@ -1,10 +1,11 @@
+#!/usr/bin/env python3
 from Neighborhood import Neighborhood
 from Player import Player
 
 class Game():
-    def __init__(self, x=1, y=1):
+    def __init__(self, x=1, y=1, generated=True):
         print("I ran")
-        self.player = Player()
+        self.player = Player(generated)
         self.nHood = Neighborhood()
         self.nHood.setPos(x, y)
         self.win = False
@@ -24,3 +25,5 @@ class Game():
         else:
             if not self.player.isAlive():
                 print("You need to be better if you actually plan on saving your family")
+
+g = Game()
