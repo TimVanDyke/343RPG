@@ -21,7 +21,7 @@ class Vampire(Monster):
     #@Param weapon
     #   Weapon that player is currently using
     def takeDamage(self, damage, weapon):
-        if weapon.getName == "ChocolateBars":
+        if weapon == "ChocolateBars":
             damage = 0
             print("HAHA YOU CANNOT HURT ME WITH THIS!")
         self.health -= damage

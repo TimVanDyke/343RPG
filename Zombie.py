@@ -13,7 +13,7 @@ class Zombie(Monster):
 
     #Zombies take double the damage when hit with sour straws
     def takeDamage(self, damage, weapon):
-        if weapon.getName == "SourStraws":
+        if weapon == "SourStraws":
             damage = damage * 2
             print("OWW THAT REALLY HURTS ME!")
         self.health -= damage

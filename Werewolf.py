@@ -11,10 +11,10 @@ class Werewolf(Monster):
         self.name = "Werewolf"
     #Werewolves don't take damage from Chocolate Bars or Sour Straws
     def takeDamage(self, damage, weapon):
-        if weapon.getName == "ChocolateBars":
+        if weapon == "ChocolateBars":
             damage = 0
             print("HAHA YOU CANNOT HURT ME WITH THIS!")
-        if weapon.getName == "SourStraws":
+        if weapon == "SourStraws":
             damage = 0
             print("HAHA YOU CANNOT HURT ME WITH THIS!")
         self.health -= damage

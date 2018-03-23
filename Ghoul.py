@@ -21,7 +21,7 @@ class Ghoul(Monster):
     #@Param weapon
     #   Passes which weapon is hitting them
     def takeDamage(self, damage, weapon):
-        if weapon.getName == "NerdBombs":
+        if weapon == "NerdBombs":
             damage = damage * 5
             print("OWWWWWWWWW THIS HURTS SO MUCH MORE THAN ANYTHING ELSE!")
         self.health -= damage

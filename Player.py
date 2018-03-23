@@ -33,16 +33,16 @@ class Player():
     #Player Attack and deals damage depending on random amount with chance of critical hit
     #@Param self
     #   Current self
-    def getAttack(self, Weapon):
+    def getAttack(self, damage):
         att = random.randint(self.minAtt, self.maxAtt)
 
         #normal attack
         if random.randint(1, 10) < 9:
-            return att * Weapon.use
+            return att * damage
 
         #critical hit
         else:
-            return att * Weapon.use * 3
+            return att * damage * 3
 
     #Chance to block attack and allows player to take damage
     #@Param self
