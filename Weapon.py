@@ -28,9 +28,7 @@ class Weapon(object):
     #   Current Instance
     def use(self):
         self.usesLeft -= 1
-        low = self.lowerMod
-        high = self.upperMod
-        return random.randint(low, high)
+        return random.randint(self.lowerMod, self.upperMod)
 
     #returns the amount of uses left on a weapon
     #@Param self

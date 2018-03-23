@@ -26,6 +26,7 @@ class Game():
         else:
             if not self.player.isAlive():
                 print("You need to be better if you actually plan on saving your family")
+        exit()
 
 g = Game()
 print("ran")
