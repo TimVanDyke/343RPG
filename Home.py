@@ -50,30 +50,24 @@ class Home():
                     print(weap.getName() + "; uses: infinite")
                 else:
                     print(weap.getName() + "; uses: " + str(weap.getUsesLeft()))
-            att = int(input("Please select an attack, do so by selecting the correct array index as shown in the inventory (please start countring with 0): "))
-            print(len(inv))
-            print(att)
-
-            for i in range(len(inv)):
-                if att == i:
-                    if inv.__len__ < i + 1:
-                        print("You selected outside the inventory")
-                    else:
-                        print("You are attacking with " + inv[i] + "!!!")
-                        attVal = Player.getAttack(inv[i])
-                        for mon in self.monsters:
-                            kill = self.monsters[mon].takeDamage(attVal, inv[i])
-                            if kill is True:
-                                self.monsters[mon] = Person()
-                            if inv[i].getUsesLeft() <= i:
-                                del inv[i]
-                            player.setInventory(inv)
-                        for mon in self.monsters:
-                            monAttVal = self.monsters[mon].getAttack()
-                            player.takeDamage(monAttVal)
-                            if player.isAlive() is True:
-                                pass
-                            else:
-                                return False
-                        fightEnd = True
+            att = str(input("Please select an attack, do so by typing the name of the weapon: "))
+            for weap in inv:
+                if att == weap.getName():
+                    print("You are attacking with " + weap.getName + "!!!")
+                    attVal = Player.getAttack(weap)
+                    for mon in self.monsters:
+                        kill = mon.takeDamage(attVal, weap)
+                        if kill is True:
+                            mon = Person()
+                        if weap.getUsesLeft() <= 0:
+                            inv.remove(weap)
+                        player.setInventory(inv)
+                    for mon in self.monsters:
+                        monAttVal = mon.getAttack()
+                        player.takeDamage(monAttVal)
+                        if player.isAlive() is True:
+                            pass
+                        else:
+                            return False
+                    fightEnd = True
             print("Please enter a valid inventory index please")
