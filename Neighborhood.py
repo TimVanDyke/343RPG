@@ -9,6 +9,7 @@ class Neighborhood():
         #https://stackoverflow.com/questions/6667201/how-to-define-a-two-dimensional-array-in-python
         print("Neighborhood is instantiated")
         self.w, self.h = 3, 2
+        self.x, self.y = 0, 0
         self.Matrix = [[0 for x in range(self.w)] for y in range(self.h)]
         for i in range(0, self.h):
             for j in range(0, self.w):
