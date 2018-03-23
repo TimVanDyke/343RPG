@@ -11,7 +11,7 @@ class Ghoul(Monster):
         self.maxAtt = 15
         self.minAtt = 30
         self.name = "Ghoul"
-        self.health = random.uniform(40, 80)
+        self.health = random.randint(40, 80)
 
     #Ghouls take a different amount of damage from Nerd Bombs than other weapons
     #@Param Self

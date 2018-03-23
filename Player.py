@@ -7,7 +7,7 @@ from ChocolateBars import ChocolateBars
 class Player():
     minAtt = 10
     maxAtt = 20
-    health = random.uniform(100, 125)
+    health = random.randint(100, 125)
     inventory = []
 
     #Creates Constructor for Player
@@ -21,7 +21,7 @@ class Player():
             self.inventory = [Kiss(), SourStraws(), SourStraws(), SourStraws(), NerdBombs(), NerdBombs(), NerdBombs(), ChocolateBars(), ChocolateBars(), ChocolateBars()]
         else:
             for i in range(2, 10):
-                rand = random.uniform(1, 3)
+                rand = random.randint(1, 3)
                 if rand == 1:
                     self.inventory[i] = SourStraws()
                 elif rand == 2:
@@ -34,10 +34,10 @@ class Player():
     #@Param self
     #   Current self
     def getAttack(self, weapon):
-        att = random.uniform(self.minAtt, self.maxAtt)
+        att = random.randint(self.minAtt, self.maxAtt)
 
         #normal attack
-        if random.uniform(1, 10) < 9:
+        if random.randint(1, 10) < 9:
             return att * weapon.use
 
         #critical hit
@@ -50,14 +50,14 @@ class Player():
     #@Param damage
     #   damage taken from the monster
     def takeDamage(self, damage):
-        rand = random.uniform(1, 10)
+        rand = random.randint(1, 10)
         #you blocked the attack!
         if rand == 1:
             damage = 0
         self.health -= damage
         if self.health < 0:
             #makes the game slightly more forgiving
-            rand = random.uniform(1, 10)
+            rand = random.randint(1, 10)
             if rand == 1:
                 #you get a second wind!
                 self.health = 25

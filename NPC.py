@@ -1,5 +1,6 @@
 import random
 class NPC(object):
+    
     maxAtt = 1
     minAtt = 1
     health = 1

@@ -11,7 +11,7 @@ class Vampire(Monster):
         self.maxAtt = 0
         self.minAtt = 20
         self.name = "Vampire"
-        self.health = random.uniform(100, 200)
+        self.health = random.randint(100, 200)
 
     #Vampires do not take any damage from Chocolate Bars
     #@Param self

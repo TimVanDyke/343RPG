@@ -15,10 +15,10 @@ class Home():
         if generated:
             self.monsters = [Ghoul(), Vampire(), Werewolf(), Zombie()]
         else:
-            num = random.uniform(0, 10)
+            num = random.randint(0, 10)
 
             for i in range(0, num):
-                rand = random.uniform(1, 4)
+                rand = random.randint(1, 4)
                 if rand == 1:
                     self.monsters[i] = Ghoul()
                 elif rand == 2:

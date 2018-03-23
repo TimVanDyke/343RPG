@@ -17,4 +17,4 @@ class Kiss(Weapon):
     #@Param self
     #   Current Instance
     def use(self):
-        return random.uniform(self.lowerMod, self.upperMod)
+        return random.randint(self.lowerMod, self.upperMod)

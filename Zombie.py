@@ -9,7 +9,7 @@ class Zombie(Monster):
         self.maxAtt = 0
         self.minAtt = 10
         self.name = "Zombie"
-        self.health = random.uniform(50, 100)
+        self.health = random.randint(50, 100)
 
     #Zombies take double the damage when hit with sour straws
     def takeDamage(self, damage, weapon):
