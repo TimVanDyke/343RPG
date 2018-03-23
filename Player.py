@@ -12,6 +12,10 @@ class Player(Observable):
     inventory = []
 
     #Creates Constructor for Player
+    #@Param self
+    #   Current Instance
+    #@Param generated
+    #   boolean to set or not set preset values
     def __init__(self, generated):
         if generated:
             self.inventory = [Kiss(), SourStraws(), SourStraws(), SourStraws(), NerdBombs(), NerdBombs(), NerdBombs(), ChocolateBars(), ChocolateBars(), ChocolateBars()]
@@ -27,6 +31,8 @@ class Player(Observable):
                 else:
                     print("You broke something in player")
     #Player Attack and deals damage depending on random amount with chance of critical hit
+    #@Param self
+    #   Current self
     def attack(self):
         att = random.uniform(self.minAtt, self.maxAtt)
 
@@ -39,6 +45,10 @@ class Player(Observable):
             return att * 3
     
     #Chance to block attack and allows player to take damage
+    #@Param self
+    #   Current self
+    #@Param damage
+    #   damage taken from the monster
     def takeDamage(self, damage):
         rand = random.uniform(1, 10)
         #you blocked the attack!
@@ -56,6 +66,8 @@ class Player(Observable):
                 print("You have died, you better practice more before trying the real thing")
     
     #Returns true if player is alive, if not return false
+    #@Param  self 
+    #   Current self
     def isAlive(self):
         if self.health > 1:
             return True
