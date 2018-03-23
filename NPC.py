@@ -4,7 +4,8 @@ class NPC(Observable):
     maxAtt = 1
     minAtt = 1
     health = 1
-    
+    name = "NPC"
+
     #Creates Constructor for NPCs
     #@Param self
     #   Current Instance
@@ -16,7 +17,7 @@ class NPC(Observable):
     #Allows for monster to attack with a chance for critical hit
     #@Param self
     #   Current Instance
-    def attack(self):
+    def getAttack(self):
         att = random.uniform(self.minAtt, self.maxAtt)
 
         #normal attack
@@ -36,7 +37,7 @@ class NPC(Observable):
     #   Weapon that the player currently holds
     def takeDamage(self, damage, Weapon):
         pass
-    
+
     #Return true if player is alive and false if player is dead
     #@Param self
     #   Current Instance
@@ -45,3 +46,9 @@ class NPC(Observable):
             return True
         else:
             return False
+
+    def getHealth(self):
+        return self.health
+
+    def getName(self):
+        return self.name

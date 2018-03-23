@@ -1,7 +1,7 @@
 from NPC import NPC
 
 class Person(NPC):
-    
+
     #Creates Constructor for Person
     #@Param self
     #   Current Instance

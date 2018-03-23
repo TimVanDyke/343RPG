@@ -1,7 +1,7 @@
 from Weapon import Weapon
 
 class SourStraws(Weapon):
-    
+
     #Creates Constructor for SourStraws
     #@Param self
     #   Current Instance

@@ -33,17 +33,17 @@ class Player(Observable):
     #Player Attack and deals damage depending on random amount with chance of critical hit
     #@Param self
     #   Current self
-    def attack(self):
+    def getAttack(self, weapon):
         att = random.uniform(self.minAtt, self.maxAtt)
 
         #normal attack
         if random.uniform(1, 10) < 9:
-            return att
+            return att * weapon.use
 
         #critical hit
         else:
-            return att * 3
-    
+            return att * weapon.use * 3
+
     #Chance to block attack and allows player to take damage
     #@Param self
     #   Current self
@@ -64,16 +64,24 @@ class Player(Observable):
                 print("You were fading, BUT YOU FEEL A SUDDEN BURST OF ENERGY!")
             else:
                 print("You have died, you better practice more before trying the real thing")
-    
+
     #Returns true if player is alive, if not return false
-    #@Param  self 
+    #@Param  self
     #   Current self
     def isAlive(self):
         if self.health > 1:
             return True
         else:
             return False
-    
-    #Updates Observable
-    def observableUpdate():
-        pass
+
+    #Returns prints the whole inventory
+    #@Param  self
+    #   Current self
+    def getInventory(self):
+        return self.inventory
+
+    def setInventory(self, inv):
+        self.inventory = inv
+
+    def getHealth(self):
+        return self.health

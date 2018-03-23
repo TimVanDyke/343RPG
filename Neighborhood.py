@@ -1,6 +1,7 @@
 from Home import Home
 from Observable import Observable
 from Observer import Observer
+from Player import Player
 
 
 class Neighborhood(Observable):
@@ -13,7 +14,7 @@ class Neighborhood(Observable):
             for j in range(1, w):
                 Matrix[i][j] = Home(generated)
 
-    def move(self):
+    def move(self, player):
         moved = False
         while not moved:
             dir = input("please give a direction in quotes: (w for up, a for left, s for down, d for right)")
@@ -22,21 +23,49 @@ class Neighborhood(Observable):
                     print("you are already at the top of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(0, -1)
+                    alive = self.getHomeAttack(player)
+                    if alive is False:
+                        return True
+                    else:
+                        pass
+                    moved = True
+                    return False
             elif dir == "a":
                 if self.getPos[0] == 0:
                     print("you are already at the left side of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(-1, 0)
+                    alive = self.getHomeAttack(player)
+                    if alive is False:
+                        return True
+                    else:
+                        pass
+                    moved = True
+                    return False
             elif dir == "s":
                 if self.getPos[1] == self.h - 1:
                     print("you are already at the bottom of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(0, 1)
+                    alive = self.getHomeAttack(player)
+                    if alive is False:
+                        return True
+                    else:
+                        pass
+                    moved = True
+                    return False
             elif dir == "d":
                 if self.getPos[0] == self.w - 1:
                     print("you are already at the right side of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(1, 0)
+                    alive = self.getHomeAttack(player)
+                    if alive is False:
+                        return True
+                    else:
+                        pass
+                    moved = True
+                    return False
             else:
                 print("Please type 'w', 'a', 's', or 'd'")
 
@@ -47,8 +76,5 @@ class Neighborhood(Observable):
         self.pos[0] += x
         self.pos[1] += y
 
-    def ObservableUpdate():
-        pass
-
-    def observerUpdate():
-        pass
+    def getHomeAttack(self, player):
+        self.Matrix[self.x, self.y].getAttack(player)

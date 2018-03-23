@@ -2,6 +2,7 @@ from Monster import Monster
 
 class Vampire(Monster):
 
+    name = "Vampire"
     #Creates Constructor for Vampires
     #@Param self
     #   Current Instance
@@ -12,7 +13,7 @@ class Vampire(Monster):
     #@Param self
     #   Current Instance
     #@Param damage
-    #   Damage going to be taken from player   
+    #   Damage going to be taken from player
     #@Param weapon
     #   Weapon that player is currently using
     def takeDamage(self, damage, weapon):
@@ -20,3 +21,7 @@ class Vampire(Monster):
             damage = 0
             print("HAHA YOU CANNOT HURT ME WITH THIS!")
         self.health -= damage
+        if self.health <= 0:
+            return True
+        else:
+            return False

@@ -1,7 +1,7 @@
 from Weapon import Weapon
 
 class NerdBombs(Weapon):
-    
+
     #Creates Constructor for NerdBombs
     #@Param self
     #   Current Instance

@@ -2,8 +2,9 @@ from Monster import Monster
 
 class Ghoul(Monster):
 
+    name = "Ghoul"
     #Creates Constructor for Ghouls
-    #@Param Self 
+    #@Param Self
     #   Current Instance
     def __init__(self):
         super(Monster, self).__init__(15, 30, 40, 80)
@@ -20,3 +21,7 @@ class Ghoul(Monster):
             damage = damage * 5
             print("OWWWWWWWWW THIS HURTS SO MUCH MORE THAN ANYTHING ELSE!")
         self.health -= damage
+        if self.health <= 0:
+            return True
+        else:
+            return False

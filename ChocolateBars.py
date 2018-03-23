@@ -1,7 +1,7 @@
 from Weapon import Weapon
 
 class ChocolateBars(Weapon):
-    
+
     #Creates Constructor for ChocolateBars
     #@Param Self
     #   Current Instance

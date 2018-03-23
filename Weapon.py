@@ -22,14 +22,14 @@ class Weapon:
         self.lowerMod = lowerMod
         self.upperMod = upperMod
         self.name = name
-    
+
     #minuses a use from weapons when they are used
     #@Param self
     #   Current Instance
     def use(self):
         self.usesLeft -= 1
         return random.uniform(self.lowerMod, self.upperMod)
-    
+
     #returns the amount of uses left on a weapon
     #@Param self
     #   Current Instance
