@@ -1,10 +1,8 @@
 from Home import Home
-from Observable import Observable
-from Observer import Observer
 from Player import Player
 
 
-class Neighborhood(Observable):
+class Neighborhood():
     pos = [0, 0]
     def init(self, generated):
         #https://stackoverflow.com/questions/6667201/how-to-define-a-two-dimensional-array-in-python

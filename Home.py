@@ -4,11 +4,9 @@ from Ghoul import Ghoul
 from Vampire import Vampire
 from Werewolf import Werewolf
 from Zombie import Zombie
-from Oberservable import Observable
-from Observer import Observer
 from Player import Player
 
-class Home(Observable, Observer):
+class Home():
     isClear = False
     monsters = []
 
@@ -33,12 +31,6 @@ class Home(Observable, Observer):
 
     def getIsClear(self):
         return self.isClear
-
-    def observableUpdate(self):
-        pass
-
-    def observerUpdate(self):
-        pass
 
     def getMonstersLeft(self):
         return self.inventory.__len__

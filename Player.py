@@ -3,9 +3,8 @@ from Kiss import Kiss
 from NerdBombs import NerdBombs
 from SourStraws import SourStraws
 from ChocolateBars import ChocolateBars
-from Oberservable import Observable
 
-class Player(Observable):
+class Player():
     minAtt = 10
     maxAtt = 20
     health = random.uniform(100, 125)

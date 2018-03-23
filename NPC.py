@@ -1,6 +1,5 @@
 import random
-from Observable import Observable
-class NPC(Observable):
+class NPC():
     maxAtt = 1
     minAtt = 1
     health = 1

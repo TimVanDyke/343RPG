@@ -1,17 +1,14 @@
-from Observer import Observer
 from Neighborhood import Neighborhood
 from Player import Player
 
-class Game(Observer):
+class Game():
     def __init__(self, x=1, y=1):
+        print("I ran")
         self.player = Player()
         self.nHood = Neighborhood()
         self.nHood.setPos(x, y)
         self.win = False
         self.gameLoop()
-
-    def observerUpdate(self):
-        pass
 
     def gameLoop(self):
         while not self.win:
