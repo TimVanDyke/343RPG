@@ -6,7 +6,7 @@ class Weapon:
     upperMod = 1
     name = "Weapon"
 
-    #Creates Constructor
+    #Creates Constructor for Weapons
     def __init__(self, uses, lowerMod, upperMod, name):
         self.usesLeft = uses
         self.lowerMod = lowerMod
