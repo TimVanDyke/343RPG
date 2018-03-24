@@ -60,8 +60,8 @@ class Home():
             print("The monsters in this house are: ")
             for mon in self.monsters:
                 print(mon.getName() + ": " + str(mon.getHealth()))
-                print("Your health is: " + str(player.getHealth()))
-                print("Your inventory is: ")
+            print("Your health is: " + str(player.getHealth()))
+            print("Your inventory is: ")
             for weap in inv:
                 if weap.getName() == "Kiss":
                     print(weap.getName() + "; uses: infinite")
