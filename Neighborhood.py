@@ -17,7 +17,6 @@ class Neighborhood():
 
     def move(self, player):
         moved = False
-        print(moved)
         while not moved:
             dir = str(input("please give a direction in quotes: (w for up, a for left, s for down, d for right)"))
             if dir == "w":
