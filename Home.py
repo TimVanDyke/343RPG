@@ -69,6 +69,7 @@ class Home():
                     print(weap.getName() + "; uses: " + str(weap.getUsesLeft()))
             att = str(input("Please select an attack, do so by typing the name of the weapon: "))
             #used for weapon selection
+            weapCount = 0
             for weap in inv:
                 if att == weap.getName():
                     print("You are attacking with " + weap.getName() + "!!!")
@@ -79,7 +80,7 @@ class Home():
                         if kill is True:
                             mon = Person()
                         if weap.getUsesLeft() <= 0:
-                            inv.remove(weap)
+                            inv.delete(weapCount)
                             player.setInventory(inv)
                     for mon in self.monsters:
                         monAttVal = mon.getAttack()
@@ -100,5 +101,6 @@ class Home():
                             monCount += 1
                         if monCount <= 0:
                             fightEnd = True
-                    continue
+                weapCount += 1
+                continue
             print("Please enter a valid attack")

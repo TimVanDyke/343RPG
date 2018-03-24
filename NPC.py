@@ -1,6 +1,6 @@
 import random
 class NPC(object):
-    
+
     maxAtt = 1
     minAtt = 1
     health = 1
@@ -12,7 +12,7 @@ class NPC(object):
     def __init__(self, minAtt, maxAtt, minHealth, maxHealth):
         self.maxAtt = maxAtt
         self.minAtt = minAtt
-        self.health = random.uniform(minHealth, maxHealth)
+        self.health = random.randint(minHealth, maxHealth)
 
     #Allows for monster to attack with a chance for critical hit
     #@Param self
