@@ -56,7 +56,7 @@ class Player():
         if rand == 1:
             print("What luck! the attack misses!")
             damage = 0
-        print("Player takes " + damage + " Damage")
+        print("Player takes " + str(damage) + " Damage")
         self.health -= damage
         if self.health < 0:
             #makes the game slightly more forgiving

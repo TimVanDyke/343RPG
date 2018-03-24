@@ -22,7 +22,7 @@ class Zombie(Monster):
         if weapon == "SourStraws":
             damage = damage * 2
             print("Zombie: OWW SourStraws REALLY HURT ME!")
-        print("Zombie takes " + damage + "... " + self.health + " health left")
+        print("Zombie takes " + str(damage) + "... " + str(self.health) + " health left")
         self.health -= damage
         if self.health <= 0:
             print("Zombie died")
