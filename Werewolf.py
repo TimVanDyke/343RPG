@@ -26,8 +26,8 @@ class Werewolf(Monster):
         if weapon == "SourStraws":
             damage = 0
             print("Werewolf: HAHA YOU CANNOT HURT ME WITH SourStraws!")
-        print("Werewolf takes " + str(damage) + "... " + str(self.health) + " health left")
         self.health -= damage
+        print("Werewolf takes " + str(damage) + "... " + str(self.health) + " health left")
         if self.health <= 0:
             print("Werewolf died")
             return True

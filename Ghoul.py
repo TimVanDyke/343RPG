@@ -24,8 +24,8 @@ class Ghoul(Monster):
         if weapon == "NerdBombs":
             damage = damage * 5
             print("OWWWWWWWWW NerdBombs HURT ME MORE THAN ANYTHING ELSE!")
-        print("Ghoul takes " + str(damage) + "... " + str(self.health) + " health left")
         self.health -= damage
+        print("Ghoul takes " + str(damage) + "... " + str(self.health) + " health left")
         if self.health <= 0:
             print("Monster died")
             return True

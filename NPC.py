@@ -18,10 +18,10 @@ class NPC(object):
     #@Param self
     #   Current Instance
     def getAttack(self):
-        att = random.uniform(self.minAtt, self.maxAtt)
+        att = random.randint(self.minAtt, self.maxAtt)
 
         #normal attack
-        if random.uniform(1, 10) < 9:
+        if random.randint(1, 10) < 9:
             return att
 
         #critical hit

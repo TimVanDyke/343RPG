@@ -75,13 +75,15 @@ class Home():
                     print("You are attacking with " + weap.getName() + "!!!")
                     attVal = player.getAttack(weap)
                     #player attacks monsters
+                    monCount = 0
                     for mon in self.monsters:
                         kill = mon.takeDamage(attVal, weap.getName())
                         if kill is True:
-                            mon = Person()
+                            del self.monsters[monCount]
                         if weap.getUsesLeft() <= 0:
                             del inv[weapCount]
                             player.setInventory(inv)
+                        monCount += 1
                     for mon in self.monsters:
                         monAttVal = mon.getAttack()
                         player.takeDamage(monAttVal)
