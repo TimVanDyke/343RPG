@@ -6,4 +6,4 @@ class Person(NPC):
     #@Param self
     #   Current Instance
     def __init__(self):
-        super(NPC, self).__init__(-1, -5, 100, 100)
+        super(NPC, self).__init__()

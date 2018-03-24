@@ -2,7 +2,7 @@ import random
 
 class Weapon(object):
     usesLeft = 1
-    lowerMod = 1
+    lowerMod = 0
     upperMod = 1
     name = "Weapon"
 
@@ -28,7 +28,7 @@ class Weapon(object):
     #   Current Instance
     def use(self):
         self.usesLeft -= 1
-        return random.randint(self.lowerMod, self.upperMod)
+        return random.uniform(self.lowerMod, self.upperMod)
 
     #returns the amount of uses left on a weapon
     #@Param self
