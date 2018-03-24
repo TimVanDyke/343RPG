@@ -5,9 +5,9 @@ from SourStraws import SourStraws
 from ChocolateBars import ChocolateBars
 
 class Player():
-    minAtt = 10
-    maxAtt = 20
-    health = random.randint(100, 125)
+    minAtt = 20
+    maxAtt = 50
+    health = random.randint(1000, 1250)
     inventory = []
 
     #Creates Constructor for Player
@@ -42,6 +42,7 @@ class Player():
 
         #critical hit
         else:
+            print("A critical hit!")
             return att * weapon.use() * 3
 
     #Chance to block attack and allows player to take damage
@@ -53,7 +54,9 @@ class Player():
         rand = random.randint(1, 10)
         #you blocked the attack!
         if rand == 1:
+            print("What luck! the attack misses!")
             damage = 0
+        print("Player takes " + damage + " Damage")
         self.health -= damage
         if self.health < 0:
             #makes the game slightly more forgiving

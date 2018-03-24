@@ -11,7 +11,7 @@ class Werewolf(Monster):
         self.minAtt = 40
         self.health = 200
         self.name = "Werewolf"
-        
+
     #Werewolves don't take damage from Chocolate Bars or Sour Straws
     #@Param self
     #   Current Instance
@@ -22,12 +22,14 @@ class Werewolf(Monster):
     def takeDamage(self, damage, weapon):
         if weapon == "ChocolateBars":
             damage = 0
-            print("HAHA YOU CANNOT HURT ME WITH THIS!")
+            print("Werewolf: HAHA YOU CANNOT HURT ME WITH ChocolateBars!")
         if weapon == "SourStraws":
             damage = 0
-            print("HAHA YOU CANNOT HURT ME WITH THIS!")
+            print("Werewolf: HAHA YOU CANNOT HURT ME WITH SourStraws!")
+        print("Werewolf takes " + damage + "... " + self.health + " health left")
         self.health -= damage
         if self.health <= 0:
+            print("Werewolf died")
             return True
         else:
             return False

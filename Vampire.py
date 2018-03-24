@@ -23,9 +23,11 @@ class Vampire(Monster):
     def takeDamage(self, damage, weapon):
         if weapon == "ChocolateBars":
             damage = 0
-            print("HAHA YOU CANNOT HURT ME WITH THIS!")
+            print("Vampire: HAHA YOU CANNOT HURT ME WITH ChocolateBars!")
+        print("Vampire takes " + damage + "... " + self.health + " health left")
         self.health -= damage
         if self.health <= 0:
+            print("Vampire died")
             return True
         else:
             return False

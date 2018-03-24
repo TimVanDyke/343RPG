@@ -15,15 +15,17 @@ class Zombie(Monster):
 
     #Zombies take double the damage when hit with sour straws
     #@Param damage
-    #    Damage passed from NPC  
+    #    Damage passed from NPC
     #@Param weapon
     #    Weapon passed from Player
     def takeDamage(self, damage, weapon):
         if weapon == "SourStraws":
             damage = damage * 2
-            print("OWW THAT REALLY HURTS ME!")
+            print("Zombie: OWW SourStraws REALLY HURT ME!")
+        print("Zombie takes " + damage + "... " + self.health + " health left")
         self.health -= damage
         if self.health <= 0:
+            print("Zombie died")
             return True
         else:
             return False

@@ -10,12 +10,12 @@ from Player import Player
 class Home():
     isClear = False
     monsters = []
-    
+
     #Creates Constructor for ChocolateBars
     #@Param Self
     #   Current Instance
     #@Param generated
-    #   Specific set 
+    #   Specific set
     def __init__(self, generated):
         print("Home is instantiated")
         if generated:
@@ -35,7 +35,7 @@ class Home():
                     self.monsters[i] = Zombie()
                 else:
                     print("You broke something in home")
-    
+
     #Returns if house is clear
     #@Param Self
     #   Current Instance
@@ -47,7 +47,7 @@ class Home():
     #   Current Instance
     def getMonstersLeft(self):
         return self.inventory.__len__
-    
+
     #Returns if house is clear
     #@Param Self
     #   Current Instance
@@ -60,25 +60,27 @@ class Home():
             print("The monsters in this house are: ")
             for mon in self.monsters:
                 print(mon.getName() + ": " + str(mon.getHealth()))
-                #print("Your health is: " + str(player.getHealth()))
-                #print("Your inventory is: ")
+                print("Your health is: " + str(player.getHealth()))
+                print("Your inventory is: ")
             for weap in inv:
                 if weap.getName() == "Kiss":
                     print(weap.getName() + "; uses: infinite")
                 else:
                     print(weap.getName() + "; uses: " + str(weap.getUsesLeft()))
             att = str(input("Please select an attack, do so by typing the name of the weapon: "))
+            #used for weapon selection
             for weap in inv:
                 if att == weap.getName():
                     print("You are attacking with " + weap.getName() + "!!!")
                     attVal = player.getAttack(weap)
+                    #player attacks monsters
                     for mon in self.monsters:
                         kill = mon.takeDamage(attVal, weap.getName())
                         if kill is True:
                             mon = Person()
                         if weap.getUsesLeft() <= 0:
-                            #inv.remove(weap)
-                        		player.setInventory(inv)
+                            inv.remove(weap)
+                            player.setInventory(inv)
                     for mon in self.monsters:
                         monAttVal = mon.getAttack()
                         player.takeDamage(monAttVal)
@@ -86,5 +88,17 @@ class Home():
                             pass
                         else:
                             return False
-                    fightEnd = True
+                    monCount = 0
+                    for NPC in self.monsters:
+                        if NPC.getName() == "Zombie":
+                            monCount += 1
+                        elif NPC.getName() == "Werewolf":
+                            monCount += 1
+                        elif NPC.getName() == "Ghoul":
+                            monCount += 1
+                        elif NPC.getName() == "Vampire":
+                            monCount += 1
+                        if monCount <= 0:
+                            fightEnd = True
+                    continue
             print("Please enter a valid attack")
