@@ -11,6 +11,9 @@ class Game():
         self.win = False
         self.gameLoop()
 
+    #Loops through Game logic
+    #@Param Self
+    #   Current Instance
     def gameLoop(self):
         while not self.win:
             print("Hello, welcome to the Haunted Neighborhood")
@@ -19,7 +22,12 @@ class Game():
             if dead:
                 self.gameEnd(False)
             self.gameEnd(self.win)
-
+    
+    #Check if win condition has been met
+    #@Param Self
+    #   Current Instance
+    #@Param Win
+    #   passes win bool to be checked
     def gameEnd(self, win):
         if win is True:
             print("You won this time, ready to save the real thing?")
