@@ -6,10 +6,16 @@ from Werewolf import Werewolf
 from Zombie import Zombie
 from Player import Player
 
+
 class Home():
     isClear = False
     monsters = []
-
+    
+    #Creates Constructor for ChocolateBars
+    #@Param Self
+    #   Current Instance
+    #@Param generated
+    #   Specific set 
     def __init__(self, generated):
         print("Home is instantiated")
         if generated:
@@ -29,13 +35,24 @@ class Home():
                     self.monsters[i] = Zombie()
                 else:
                     print("You broke something in home")
-
+    
+    #Returns if house is clear
+    #@Param Self
+    #   Current Instance
     def getIsClear(self):
         return self.isClear
 
+    #Returns if house has monsters
+    #@Param Self
+    #   Current Instance
     def getMonstersLeft(self):
         return self.inventory.__len__
-
+    
+    #Returns if house is clear
+    #@Param Self
+    #   Current Instance
+    #@Param Player
+    #   Passes Player with inv
     def getAttack(self, player):
         inv = player.getInventory()
         fightEnd = False
