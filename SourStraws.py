@@ -9,5 +9,5 @@ class SourStraws(Weapon):
         super(Weapon, self).__init__()
         self.usesLeft = 2
         self.lowerMod = 1
-        self.upperMod = 1.75
+        self.upperMod = 2
         self.name = "SourStraws"

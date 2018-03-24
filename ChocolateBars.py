@@ -9,5 +9,5 @@ class ChocolateBars(Weapon):
         super(Weapon, self).__init__()
         self.usesLeft = 4
         self.lowerMod = 2
-        self.upperMod = 2.4
+        self.upperMod = 3
         self.name = "ChocolateBars"
