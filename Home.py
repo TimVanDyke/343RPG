@@ -80,7 +80,7 @@ class Home():
                         if kill is True:
                             mon = Person()
                         if weap.getUsesLeft() <= 0:
-                            inv.delete(weapCount)
+                            del inv[weapCount]
                             player.setInventory(inv)
                     for mon in self.monsters:
                         monAttVal = mon.getAttack()
