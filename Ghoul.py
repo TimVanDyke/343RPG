@@ -27,7 +27,7 @@ class Ghoul(Monster):
         self.health -= damage
         print("Ghoul takes " + str(damage) + "... " + str(self.health) + " health left")
         if self.health <= 0:
-            print("Monster died")
+            print("Ghoul died")
             return True
         else:
             return False

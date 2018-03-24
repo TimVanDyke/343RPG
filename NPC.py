@@ -4,7 +4,7 @@ class NPC(object):
     maxAtt = 1
     minAtt = 1
     health = 1
-    name = "NPC"
+    name = "Person"
 
     #Creates Constructor for NPCs
     #@Param self
