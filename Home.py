@@ -67,8 +67,8 @@ class Home():
                     print(weap.getName() + "; uses: infinite")
                 else:
                     print(weap.getName() + "; uses: " + str(weap.getUsesLeft()))
-            att = str(input("Please select an attack, do so by typing the name of the weapon: "))
             for weap in inv:
+                att = str(input("Please select an attack, do so by typing the name of the weapon: "))
                 if att == weap.getName():
                     print("You are attacking with " + weap.getName() + "!!!")
                     attVal = player.getAttack(weap)
