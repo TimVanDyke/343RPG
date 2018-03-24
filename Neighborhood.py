@@ -15,6 +15,11 @@ class Neighborhood():
             for j in range(0, self.w):
                 self.Matrix[i][j] = Home(generated)
 
+    #Moves Player from house to house
+    #@Param Self
+    #   Current Instance
+    #@Param Player
+    #   passes specific player
     def move(self, player):
         moved = False
         while not moved:
@@ -69,13 +74,28 @@ class Neighborhood():
                     return False
             else:
                 print("Please type 'w', 'a', 's', or 'd'")
-
+    
+    #Return position of Player
+    #@Param Self
+    #   Current Instance
     def getPos(self):
         return self.pos
-
+    
+    #Sets position of Player
+    #@Param Self
+    #   Current Instance
+    #@Param X
+    #   X coordinate of player
+    #@Param Y
+    #   Y coordinate of player
     def setPos(self, x, y):
         self.pos[0] += x
         self.pos[1] += y
-
+    
+    #Returns if house is clear
+    #@Param Self
+    #   Current Instance
+    #@Param Player
+    #   Passes Player to this method
     def getHomeAttack(self, player):
         self.Matrix[self.x][self.y].getAttack(player)
