@@ -7,8 +7,8 @@ class Werewolf(Monster):
     #   Current Instance
     def __init__(self):
         super(Monster, self).__init__(0, 40, 200, 200)
-        self.maxAtt = 0
-        self.minAtt = 40
+        self.maxAtt = 40
+        self.minAtt = 0
         self.health = 200
         self.name = "Werewolf"
 

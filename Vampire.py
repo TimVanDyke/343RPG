@@ -8,8 +8,8 @@ class Vampire(Monster):
     #   Current Instance
     def __init__(self):
         super(Monster, self).__init__(0, 20, 100, 200)
-        self.maxAtt = 0
-        self.minAtt = 20
+        self.maxAtt = 20
+        self.minAtt = 0
         self.name = "Vampire"
         self.health = random.randint(100, 200)
 
