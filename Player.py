@@ -16,7 +16,6 @@ class Player():
     #@Param generated
     #   boolean to set or not set preset values
     def __init__(self, generated):
-        print("Player is instantiated")
         if generated:
             self.inventory = [Kiss(), SourStraws(), SourStraws(), SourStraws(), NerdBombs(), NerdBombs(), NerdBombs(), ChocolateBars(), ChocolateBars(), ChocolateBars()]
         else:
