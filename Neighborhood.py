@@ -95,6 +95,7 @@ class Neighborhood():
         self.pos[0] += x
         self.pos[1] += y
         self.Matrix[x][y]
+	print(self.Matrix[x][y])
 				
 
     #Returns if house is clear
