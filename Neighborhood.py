@@ -31,7 +31,7 @@ class Neighborhood():
                 if self.getPos()[1] == 0:
                     print("you are already at the top of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
-                    self.setPos(0, 1)
+                    self.setPos(0, -1)
                     alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
@@ -55,7 +55,7 @@ class Neighborhood():
                 if self.getPos()[1] == self.h - 1:
                     print("you are already at the bottom of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
-                    self.setPos(0, -1)
+                    self.setPos(0, 1)
                     alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
