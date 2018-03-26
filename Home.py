@@ -71,6 +71,7 @@ class Home():
             #used for weapon selection
             weapCount = 0
             for weap in inv:
+                weapCount += 1
                 if att == weap.getName():
                     print("You are attacking with " + weap.getName() + "!!!")
                     attVal = player.getAttack(weap)
@@ -82,7 +83,7 @@ class Home():
                             del self.monsters[monCount]
                             self.monsters.append(Person())
                         if weap.getUsesLeft() <= 0:
-                            del inv[weapCount]
+                            del inv[weapCount - 1]
                             player.setInventory(inv)
                         monCount += 1
                     for mon in self.monsters:
@@ -104,5 +105,5 @@ class Home():
                             monCount += 1
                         if monCount <= 0:
                             fightEnd = True
-                    weapCount += 1
                     break
+            print("Please enter a valid attack")
