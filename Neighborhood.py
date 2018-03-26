@@ -105,6 +105,9 @@ class Neighborhood():
     def getHomeAttack(self, player):
         self.Matrix[self.x][self.y].getAttack(player)
 
+    #Returns if map is clear
+    #@Param Self
+    #   Current Instance
     def isMapClear(self):
         for i in range(0, self.h):
             for j in range(0, self.w):
