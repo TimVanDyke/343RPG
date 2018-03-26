@@ -8,7 +8,7 @@ from Player import Player
 
 
 class Home():
-    #Creates Constructor for ChocolateBars
+    #Creates Constructor for Home
     #@Param Self
     #   Current Instance
     #@Param generated
