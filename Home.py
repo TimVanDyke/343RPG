@@ -82,8 +82,8 @@ class Home():
                             self.monsters.append(Person())
                         monCount += 1
                     if weap.getUsesLeft() <= 0:
-                            del inv[weapCount - 1]
-                            player.setInventory(inv)
+                        del inv[weapCount - 1]
+                        player.setInventory(inv)
                     for mon in self.monsters:
                         monAttVal = mon.getAttack()
                         player.takeDamage(monAttVal)
