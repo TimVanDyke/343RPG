@@ -30,10 +30,11 @@ class Game():
     def gameEnd(self, win):
         if win is True:
             print("You won this time, ready to save the real thing?")
+            exit()
         else:
             if not self.player.isAlive():
                 print("You need to be better if you actually plan on saving your family")
-        exit()
+                exit()
 
 g = Game()
 print("ran")
