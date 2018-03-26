@@ -17,8 +17,9 @@ class Game():
     def gameLoop(self):
         print("Hello, welcome to the Haunted Neighborhood")
         while not self.win:
-            dead = self.nHood.move(self.player)
-            if dead:
+            self.nHood.move(self.player)
+            alive = player.isAlive()
+            if not alive:
                 self.gameEnd(False)
         self.gameEnd(self.nHood.sMapClear())
 
