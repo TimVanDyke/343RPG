@@ -104,5 +104,5 @@ class Home():
                         if monCount <= 0:
                             self.isClear = True
                             fightEnd = True
-                break
+                   break
             print("Please enter a valid attack")
