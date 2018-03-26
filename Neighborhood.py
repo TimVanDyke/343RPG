@@ -21,6 +21,9 @@ class Neighborhood():
     #@Param Player
     #   passes specific player
     def move(self, player):
+        print("You are here: ")
+        print(self.position)
+        print(" ")
         moved = False
         while not moved:
             dir = str(input("please give a direction in quotes: (w for up, a for left, s for down, d for right)"))

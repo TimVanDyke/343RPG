@@ -102,7 +102,7 @@ class Home():
                         elif NPC.getName() == "Vampire":
                             monCount += 1
                         if monCount <= 0:
-                            fightEnd = True
                             self.isClear = True
+                            fightEnd = True
                     break
             print("Please enter a valid attack")
