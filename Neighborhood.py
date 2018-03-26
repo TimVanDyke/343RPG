@@ -55,7 +55,7 @@ class Neighborhood():
                 if self.getPos()[1] == self.h - 1:
                     print("you are already at the bottom of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
-                    self.setPos(0, 1)
+                    self.setPos(0, -1)
                     alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
@@ -92,10 +92,10 @@ class Neighborhood():
     #@Param Y
     #   Y coordinate of player
     def setPos(self, x, y):
-        self.pos[0] = x
-        self.pos[1] = y
-        self.x = x
-        self.y = y
+        self.pos[0] += x
+        self.pos[1] += y
+        self.x += x
+        self.y += y
 			
     #Returns if house is clear
     #@Param Self
