@@ -21,7 +21,7 @@ class Game():
             alive = self.player.isAlive()
             if not alive:
                 self.gameEnd(False)
-        self.gameEnd(self.nHood.sMapClear())
+        self.gameEnd(self.nHood.isMapClear())
 
     #Check if win condition has been met
     #@Param Self
