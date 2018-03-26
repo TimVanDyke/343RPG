@@ -31,8 +31,9 @@ class Neighborhood():
                 if self.getPos()[1] == 0:
                     print("you are already at the top of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
-                    self.setPos(0, -1)
-                    alive = self.getHomeAttack(player)
+                    self.setPos(0, 1)
+                    self.Matrix[i][j + 1]
+										alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
                     else:
@@ -44,6 +45,7 @@ class Neighborhood():
                     print("you are already at the left side of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(-1, 0)
+										self.Matrix[i - 1][j]
                     alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
@@ -56,6 +58,7 @@ class Neighborhood():
                     print("you are already at the bottom of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(0, 1)
+										self.Matrix[i][j - 1]
                     alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
@@ -68,6 +71,7 @@ class Neighborhood():
                     print("you are already at the right side of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(1, 0)
+										self.Matrix[i + 1][j]
                     alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
@@ -94,6 +98,7 @@ class Neighborhood():
     def setPos(self, x, y):
         self.pos[0] += x
         self.pos[1] += y
+				
 
     #Returns if house is clear
     #@Param Self

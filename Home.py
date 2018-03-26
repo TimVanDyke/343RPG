@@ -13,7 +13,7 @@ class Home():
     #   Current Instance
     #@Param generated
     #   Specific set
-    def __init__(self, generated):
+    def __init__(self,generated):
         self.monsters = []
         self.isClear = False
         if generated:
