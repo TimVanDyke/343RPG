@@ -15,14 +15,14 @@ class Game():
     #@Param Self
     #   Current Instance
     def gameLoop(self):
+        print("Hello, welcome to the Haunted Neighborhood")
         while not self.win:
-            print("Hello, welcome to the Haunted Neighborhood")
-            dead = False
             dead = self.nHood.move(self.player)
             if dead:
                 self.gameEnd(False)
-            self.gameEnd(self.win)
-    
+            
+        self.gameEnd(self.win)
+
     #Check if win condition has been met
     #@Param Self
     #   Current Instance

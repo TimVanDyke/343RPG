@@ -105,5 +105,4 @@ class Home():
                         if monCount <= 0:
                             fightEnd = True
                 weapCount += 1
-                continue
-            print("Please enter a valid attack")
+                break

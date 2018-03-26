@@ -8,7 +8,7 @@ class Neighborhood():
         self.generated = generated
         #https://stackoverflow.com/questions/6667201/how-to-define-a-two-dimensional-array-in-python
         print("Neighborhood is instantiated")
-        self.w, self.h = 3, 2
+        self.w, self.h = 2, 2
         self.x, self.y = 0, 0
         self.Matrix = [[0 for x in range(self.w)] for y in range(self.h)]
         for i in range(0, self.h):
@@ -74,13 +74,13 @@ class Neighborhood():
                     return False
             else:
                 print("Please type 'w', 'a', 's', or 'd'")
-    
+
     #Return position of Player
     #@Param Self
     #   Current Instance
     def getPos(self):
         return self.pos
-    
+
     #Sets position of Player
     #@Param Self
     #   Current Instance
@@ -91,7 +91,7 @@ class Neighborhood():
     def setPos(self, x, y):
         self.pos[0] += x
         self.pos[1] += y
-    
+
     #Returns if house is clear
     #@Param Self
     #   Current Instance
