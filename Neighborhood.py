@@ -32,7 +32,6 @@ class Neighborhood():
                     print("you are already at the top of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(0, 1)
-                    self.Matrix[i][j + 1]
 		    alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
@@ -45,7 +44,6 @@ class Neighborhood():
                     print("you are already at the left side of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(-1, 0)
-		    self.Matrix[i - 1][j]
                     alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
@@ -58,7 +56,6 @@ class Neighborhood():
                     print("you are already at the bottom of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(0, 1)
-		    self.Matrix[i][j - 1]
                     alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
@@ -71,7 +68,6 @@ class Neighborhood():
                     print("you are already at the right side of the Neighborhood! We need to finish our own Neighborhood first!")
                 else:
                     self.setPos(1, 0)
-		    self.Matrix[i + 1][j]
                     alive = self.getHomeAttack(player)
                     if alive is False:
                         return True
