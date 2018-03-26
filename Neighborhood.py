@@ -99,3 +99,10 @@ class Neighborhood():
     #   Passes Player to this method
     def getHomeAttack(self, player):
         self.Matrix[self.x][self.y].getAttack(player)
+
+    def isMapClear(self):
+        for i in range(0, self.h):
+            for j in range(0, self.w):
+                if not self.Matrix[i][j].getIsClear():
+                    return False
+        return True

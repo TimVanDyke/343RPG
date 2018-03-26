@@ -8,16 +8,14 @@ from Player import Player
 
 
 class Home():
-    isClear = False
-    monsters = []
-
     #Creates Constructor for ChocolateBars
     #@Param Self
     #   Current Instance
     #@Param generated
     #   Specific set
     def __init__(self, generated):
-        print("Home is instantiated")
+        self.monsters = []
+        self.isClear = False
         if generated:
             self.monsters = [Ghoul(), Vampire(), Werewolf(), Zombie()]
         else:
@@ -105,5 +103,6 @@ class Home():
                             monCount += 1
                         if monCount <= 0:
                             fightEnd = True
+                            self.isClear = True
                     break
             print("Please enter a valid attack")

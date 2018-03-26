@@ -20,8 +20,7 @@ class Game():
             dead = self.nHood.move(self.player)
             if dead:
                 self.gameEnd(False)
-            
-        self.gameEnd(self.win)
+        self.gameEnd(self.nHood.sMapClear())
 
     #Check if win condition has been met
     #@Param Self
