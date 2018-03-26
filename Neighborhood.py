@@ -92,12 +92,11 @@ class Neighborhood():
     #@Param Y
     #   Y coordinate of player
     def setPos(self, x, y):
-        self.pos[0] += x
-        self.pos[1] += y
-        self.Matrix[x][y]
-        print(self.Matrix[x][y])
-				
-
+        self.pos[0] = x
+        self.pos[1] = y
+        self.x = x
+        self.y = y
+			
     #Returns if house is clear
     #@Param Self
     #   Current Instance
