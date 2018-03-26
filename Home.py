@@ -85,6 +85,7 @@ class Home():
                             del inv[weapCount]
                             player.setInventory(inv)
                         monCount += 1
+                    weapCount += 1
                     for mon in self.monsters:
                         monAttVal = mon.getAttack()
                         player.takeDamage(monAttVal)
@@ -104,5 +105,4 @@ class Home():
                             monCount += 1
                         if monCount <= 0:
                             fightEnd = True
-                weapCount += 1
-                break
+                    break
