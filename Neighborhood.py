@@ -22,7 +22,7 @@ class Neighborhood():
     #   passes specific player
     def move(self, player):
         print("You are here: ")
-        print(self.position)
+        print(self.pos)
         print(" ")
         moved = False
         while not moved:
