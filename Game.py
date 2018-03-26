@@ -22,7 +22,7 @@ class Game():
             if not alive:
                 self.gameEnd(False)
             win = self.nHood.isMapClear()
-            if win
+            if win:
                 self.gameEnd(True)
 
     #Check if win condition has been met
