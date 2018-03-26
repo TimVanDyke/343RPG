@@ -7,7 +7,7 @@ from ChocolateBars import ChocolateBars
 class Player():
     minAtt = 20
     maxAtt = 50
-    health = 100000000 #random.randint(500, 750)
+    health = random.randint(500, 750)
     inventory = []
 
     #Creates Constructor for Player
